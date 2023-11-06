@@ -8,6 +8,10 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { GradesComponent } from './grades/grades.component';
 import { CoursePlannerComponent } from './course-planner/course-planner.component';
 import { SettingsComponent } from './settings/settings.component';
+import { InvalidDataComponent } from './invalid-data/invalid-data.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CalendarComponent } from './calendar/calendar.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,10 @@ import { SettingsComponent } from './settings/settings.component';
     ToDoListComponent,
     GradesComponent,
     CoursePlannerComponent,
-    SettingsComponent
+    SettingsComponent,
+    InvalidDataComponent,
+    PageNotFoundComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
