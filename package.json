@@ -1,0 +1,25 @@
+{
+  "name": "study-buddy-app",
+  "version": "1.0.0",
+  "description": "Study buddy (study tool) app for students",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "study",
+    "tool",
+    "app",
+    "students",
+    "tracker"
+  ],
+  "author": "Emily Ung",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.3",
+    "bootstrap": "^5.3.2",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0",
+    "node.js": "^0.0.1-security"
+  }
+}
