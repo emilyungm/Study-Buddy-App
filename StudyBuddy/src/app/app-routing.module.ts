@@ -9,11 +9,13 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { GradesComponent } from './grades/grades.component';
 import { CoursePlannerComponent } from './course-planner/course-planner.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AddTaskComponent } from './add-task/add-task.component';
 
 const routes: Routes = [
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: '', component: HomeComponent },
+  { path: 'add-task', component: AddTaskComponent},
   { path: 'to-do-list', component: ToDoListComponent},
   { path: 'calendar', component: CalendarComponent},
   { path: 'grades', component: GradesComponent},

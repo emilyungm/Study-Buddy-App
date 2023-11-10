@@ -1,0 +1,46 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <div class="container mt-5 w-50 mb-5" style="border:2px solid; border-radius: 3pt;">
+            <div class="container text-center my-5">
+                <h3>Add a task to the To-Do list:</h3>
+            </div>
+            <div class="form-group py-3">
+                <form>
+                    <div class="form-group mb-3">
+                        <label for="name">Enter task name (required):</label>
+                        <input type="text" class="form-control" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" id="name" placeholder="Name" required/> 
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="unit">Enter unit code (required):</label>
+                        <input type="text" class="form-control" [(ngModel)]="unit" [ngModelOptions]="{standalone: true}" id="unit" placeholder="Unit code" required/> 
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="dueDate">Enter due date (required):</label>
+                        <input type="datetime-local" class="form-control" [(ngModel)]="dueDate" [ngModelOptions]="{standalone: true}" id="dueDate" placeholder="Due Date" required/> 
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="type">Enter type of assessment task (required):</label>
+                        <input type="text" class="form-control" [(ngModel)]="type" [ngModelOptions]="{standalone: true}" id="type" placeholder="Type" required/> 
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="progress">Enter progress (%):</label>
+                        <input type="number" min= "0" max = "100" class="form-control" [(ngModel)]="progress" [ngModelOptions]="{standalone: true}" id="progress" placeholder="Progress"/> 
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="weighting">Enter weighting (required):</label>
+                        <input type="number" min= "1" max = "100" class="form-control" [(ngModel)]="weighting" [ngModelOptions]="{standalone: true}" id="weighting" placeholder="Weighting" required/> 
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button (click)="saveTask()" class="btn btn-sm" style="color: #ffff; background-color: #eb67d3;">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

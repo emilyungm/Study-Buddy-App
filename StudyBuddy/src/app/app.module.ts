@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { Routes, RouterModule } from '@angular/router';
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
@@ -11,6 +13,9 @@ import { SettingsComponent } from './settings/settings.component';
 import { InvalidDataComponent } from './invalid-data/invalid-data.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { FormsModule } from '@angular/forms';
+import { AddTaskComponent } from './add-task/add-task.component';
+import { DatabaseService } from './database.service';
 
 
 @NgModule({
@@ -23,13 +28,17 @@ import { CalendarComponent } from './calendar/calendar.component';
     SettingsComponent,
     InvalidDataComponent,
     PageNotFoundComponent,
-    CalendarComponent
+    CalendarComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [DatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
