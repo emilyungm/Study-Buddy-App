@@ -15,8 +15,8 @@ export class DatabaseService {
     return this.http.post("/add-task", t, httpOptions);
   }
 
-  // getToDo() {
-  //   return this.http.get("/to-do-list");
-  // }
+  getAllTasks() {
+    return this.http.get("/to-do-list");
+  }
 
 }

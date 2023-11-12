@@ -54,3 +54,4 @@ async function connect(url) {
 connect(url).then(console.log).catch((err) => console.log(err));
 
 app.post("/add-task", taskCont.newTask);
+app.get("/to-do-list", taskCont.getTasks);

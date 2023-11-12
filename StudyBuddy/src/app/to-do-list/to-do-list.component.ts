@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { DatabaseService } from '../database.service';
 import { Router } from '@angular/router';
-import { DatabaseService } from "../../app/database.service";
 
 @Component({
   selector: 'app-to-do-list',
@@ -9,4 +9,19 @@ import { DatabaseService } from "../../app/database.service";
 })
 export class ToDoListComponent {
 
+  tasks: any[] = [];
+
+  constructor(private dbService: DatabaseService) {
+    this.getRecords();
+  }
+
+  // need algorithm to order the tasks in importance
+  getRecords() {
+    this.dbService.getAllTasks().subscribe({
+      next: (data: any) => {
+        this.tasks = data;
+      },
+      error: (err) => { }
+    })
+  }
 }

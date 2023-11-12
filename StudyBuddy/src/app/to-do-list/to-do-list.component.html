@@ -1,1 +1,42 @@
-<p>to do list works!</p>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container text-center my-5">
+            <h1>To-Do List</h1>
+        </div>
+
+        <div class="container text-center">
+            <button routerLink="/add-task" class="btn btn-lg" style="background-color: #e2a8ed;">Add a task to the To-Do List</button>
+        </div>
+
+        <div class="container py-5">
+            <table class="table">
+                <tr>
+                    <th>Priority</th>
+                    <th>Name</th>
+                    <th>Unit</th>
+                    <th>Due date</th>
+                    <th>Type</th>
+                    <th>Progress</th>
+                    <th>Weighting</th>
+                    <th>Actions</th>        
+                    <!-- mark as submitted btn, delete btn, something to update progress (under actions tab) -->
+                </tr>
+                <tr *ngFor="let task of tasks">
+                    <td>-</td>
+                    <td>{{task.name}}</td>
+                    <td>{{task.unit}}</td>
+                    <td>{{task.dueDate | datePipe}}</td>
+                    <td>{{task.type}}</td>
+                    <td>{{task.progress}}</td>
+                    <td>{{task.weighting}}</td>
+                    <td>actions</td>
+                </tr>
+            </table>
+
+        </div>
+
+    </body>
+</html>

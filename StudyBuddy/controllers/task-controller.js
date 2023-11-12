@@ -25,7 +25,17 @@ module.exports = {
             res.json({"acknowledged": true})
 
         } catch (error) {
-            console.error('Error deleting the category:', error);
+            console.error('Error deleting the task:', error);
+            return res.status(400).json({ error: 'Internal Server Error' });
+        }
+    },
+
+    getTasks: async function (req, res) {
+        try {
+            let tasks = await Task.find({});
+            res.json(tasks);
+        } catch (error) {
+            console.error('Error fetching the tasks', error);
             return res.status(400).json({ error: 'Internal Server Error' });
         }
     },

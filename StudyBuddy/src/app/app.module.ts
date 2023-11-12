@@ -16,6 +16,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { FormsModule } from '@angular/forms';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { DatabaseService } from './database.service';
+import { DatePipePipe } from './date-pipe.pipe';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { DatabaseService } from './database.service';
     InvalidDataComponent,
     PageNotFoundComponent,
     CalendarComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    DatePipePipe
   ],
   imports: [
     BrowserModule,
