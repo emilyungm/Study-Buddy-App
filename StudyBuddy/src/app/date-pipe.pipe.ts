@@ -6,7 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DatePipePipe implements PipeTransform {
 
   transform(value: Date): String {
-    return value.toLocaleString();
+    let inputDate = new Date(value);
+    return inputDate.toLocaleString();
   }
 
 }
