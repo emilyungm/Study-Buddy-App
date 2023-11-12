@@ -21,7 +21,7 @@ module.exports = {
 
     deleteTask: async function (req, res) {
         try {
-            await Task.deleteOne({ _id: req.body.taskId });
+            await Task.deleteOne({ _id: req.body._id });
             res.json({"acknowledged": true})
 
         } catch (error) {

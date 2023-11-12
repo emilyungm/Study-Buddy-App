@@ -32,7 +32,7 @@
                     <td>{{task.type}}</td>
                     <td>{{task.progress}}</td>
                     <td>{{task.weighting}}</td>
-                    <td>actions</td>
+                    <td><button (click)="onDeleteTask(task)" class="btn btn-sm" style="background-color: #e2a8ed;">Delete</button></td>
                 </tr>
             </table>
 

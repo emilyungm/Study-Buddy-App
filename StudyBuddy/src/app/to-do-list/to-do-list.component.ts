@@ -11,7 +11,7 @@ export class ToDoListComponent {
 
   tasks: any[] = [];
 
-  constructor(private dbService: DatabaseService) {
+  constructor(private dbService: DatabaseService, private router: Router) {
     this.getRecords();
   }
 
@@ -23,5 +23,16 @@ export class ToDoListComponent {
       },
       error: (err) => { }
     })
+  }
+
+  onDeleteTask(item: any) {
+    this.dbService.deleteTask(item).subscribe(result => {
+      this.getRecords();
+      this.router.navigate(["/to-do-list"])
+    })
+  }
+
+  ngOnInit() {
+    this.getRecords();
   }
 }

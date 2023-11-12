@@ -19,4 +19,8 @@ export class DatabaseService {
     return this.http.get("/to-do-list");
   }
 
+  deleteTask(t: any) {
+    return this.http.post("/to-do-list", t, httpOptions);
+  }
+
 }
