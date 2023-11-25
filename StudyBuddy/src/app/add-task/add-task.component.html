@@ -23,9 +23,16 @@
                         <label for="dueDate">Enter due date (required):</label>
                         <input type="datetime-local" class="form-control" [(ngModel)]="dueDate" [ngModelOptions]="{standalone: true}" id="dueDate" placeholder="Due Date" required/> 
                     </div>
-                    <div class="form-group mb-3">
-                        <label for="type">Enter type of assessment task (required):</label>
-                        <input type="text" class="form-control" [(ngModel)]="type" [ngModelOptions]="{standalone: true}" id="type" placeholder="Type" required/> 
+                    <div class="input-group mb-3">
+                    <label for="type">Enter type of assessment task (required):</label>
+                        <select class="custom-select" [(ngModel)]="type" [ngModelOptions]="{standalone: true}" id="type" placeholder="Type" required>
+                            <option value="midsem">Mid-Semester test</option>
+                            <option value="test">Test</option>
+                            <option value="quiz">Quiz</option>
+                            <option value="assignment">Assignment</option>
+                            <option value="exam">Exam</option>
+                            <option value="lab">Lab task</option>
+                        </select>
                     </div>
                     <div class="form-group mb-3">
                         <label for="progress">Enter progress (%):</label>
