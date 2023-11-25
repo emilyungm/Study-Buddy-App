@@ -30,9 +30,18 @@
                     <td>{{task.unit}}</td>
                     <td>{{task.dueDate | datePipe}}</td>
                     <td>{{task.type}}</td>
-                    <td>{{task.progress}}</td>
-                    <td>{{task.weighting}}</td>
-                    <td><button (click)="onDeleteTask(task)" class="btn btn-sm" style="background-color: #e2a8ed;">Delete</button></td>
+                    <td>{{task.progress}}%</td>
+                    <td>{{task.weighting}}%</td>
+                    <td>
+                        <div class="row">
+                            <div class="col-6">
+                                <button (click)="onEditTaskOption(task)" class="btn btn-sm" style="background-color: #e2a8ed;">Edit</button>
+                            </div>
+                            <div class="col-6">
+                                <button (click)="onDeleteTask(task)" class="btn btn-sm" style="background-color: #e2a8ed;">Delete</button>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
             </table>
 

@@ -40,6 +40,26 @@ module.exports = {
         }
     },
 
+    getOneTask: async function (req, res) {
+        try {
+            let task = await Task.findOne({_id: req.params.taskID});
+            res.json(task);
+
+        } catch (error) {
+            console.error('Error fetching the task', error);
+            return res.status(400).json({ error: 'Internal Server Error' });
+        }
+    },
+
+    editTask: async function (req, res) {
+        try {
+            let task = await Task.findOne({_id: req.body._id})
+        } catch (error) {
+            console.error('Error editing/updating the task details', error);
+            return res.status(400).json({ error: 'Internal Server Error' });
+        }
+    },
+
     updateScore: async function (req, res) {
         
     },

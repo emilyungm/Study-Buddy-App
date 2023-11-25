@@ -32,6 +32,10 @@ export class ToDoListComponent {
     })
   }
 
+  onEditTaskOption(item: any) {
+      this.router.navigate([`/edit-task/${item._id.toString()}`])
+  }
+
   ngOnInit() {
     this.getRecords();
   }

@@ -10,6 +10,7 @@ import { GradesComponent } from './grades/grades.component';
 import { CoursePlannerComponent } from './course-planner/course-planner.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AddTaskComponent } from './add-task/add-task.component';
+import { EditTaskComponent } from './edit-task/edit-task.component';
 
 const routes: Routes = [
 
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'grades', component: GradesComponent},
   { path: 'course-planner', component: CoursePlannerComponent},
   { path: 'settings', component: SettingsComponent},
+  { path: 'edit-task/:taskID', component: EditTaskComponent},
 
   //Routes for error page
   { path: 'invalid-data', component: InvalidDataComponent },

@@ -56,3 +56,5 @@ connect(url).then(console.log).catch((err) => console.log(err));
 app.post("/add-task", taskCont.newTask);
 app.get("/to-do-list", taskCont.getTasks);
 app.post("/to-do-list", taskCont.deleteTask);
+app.post("/edit-task/:taskID", taskCont.editTask);
+app.get("/edit-task/:taskID", taskCont.getOneTask);

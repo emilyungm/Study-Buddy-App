@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="container mt-5 w-50 mb-5" style="border:2px solid; border-radius: 3pt;">
+
+            <div class="container text-center my-5">
+                <h1>Editing task: {{task.name}} of {{task.unit}}</h1>
+            </div>
+
+            <div class="form-group py-3">
+                <form>
+                    <div class="form-group mb-3">
+                        <label for="dueDate">Due date (required):</label>
+                        <input type="datetime-local" class="form-control" [(ngModel)]="newDueDate" [ngModelOptions]="{standalone: true}" id="dueDate" placeholder="Due Date" required/> 
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="progress">Progress (%):</label>
+                        <input type="number" min= "0" max = "100" class="form-control" [(ngModel)]="newProgress" [ngModelOptions]="{standalone: true}" id="progress" placeholder="Progress"/> 
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button (click)="updateTask()" class="btn btn-sm" style="background-color: #e2a8ed;">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

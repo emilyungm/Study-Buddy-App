@@ -23,4 +23,12 @@ export class DatabaseService {
     return this.http.post("/to-do-list", t, httpOptions);
   }
 
+  editTask(t: any) {
+    return this.http.post(`/edit-task/${t._id.toString()}`, t, httpOptions);
+  }
+
+  getTask(id: string) {
+    return this.http.get(`/edit-task/${id}`);
+  }
+
 }
